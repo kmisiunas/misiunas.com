@@ -60,7 +60,7 @@ for (var y = 0, i = 0; y < cellHeight; ++y) {
 }
 
 d3.timer(function() {
-  if (!(n0 = frontier.length) && cells.length*fillFraction < counter) return true;
+  if (!(n0 = frontier.length) && cells.length*fillFraction < counter) return true; // added stopping mechanism
 
   context.fillStyle = d3.hsl(distance++ % 360, 1, .5) + "";
 
@@ -84,12 +84,12 @@ d3.timer(function() {
 
     frontier = frontier1;
   }
-  context.fillRect(10,20,200,80);
-  context.fillStyle = "#000";
-  context.font = "30px Arial";
+  // Debug
+  //context.fillRect(10,20,200,80);
+  //context.fillStyle = "#000";
+  //context.font = "30px Arial";
   //context.fillText('counter: '+counter, 10, 50);
-  context.fillText('frontier: '+frontier.length, 10, 50);
-  context.fillText('cells2: '+cells.length, 10, 80);
+  //context.fillText('cells2: '+cells.length, 10, 80);
 });
 
 function fillCell(i) { // used to draw the maze
