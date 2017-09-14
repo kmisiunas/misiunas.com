@@ -13,6 +13,9 @@ body {
 
 var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+// small correction to allow better aligment 
+width = width - 12;
+height = height - 12;
 
 var N = 1 << 0,
     S = 1 << 1,
