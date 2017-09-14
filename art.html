@@ -91,8 +91,8 @@ d3.timer(function() {
   context.fillText('counter: '+counter, 10, 50);
 });
 
-function fillCell(i) {
-  counter = counter + 1;
+function fillCell(i) { // used to draw the maze
+  //counter = counter + 1;
   var x = i % cellWidth, y = i / cellWidth | 0;
   context.fillRect(x * cellSize + (x + 1) * cellSpacing, y * cellSize + (y + 1) * cellSpacing, cellSize, cellSize);
 }
