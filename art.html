@@ -60,7 +60,7 @@ for (var y = 0, i = 0; y < cellHeight; ++y) {
 }
 
 d3.timer(function() {
-  if (!(n0 = frontier.length) && cells.length*fillFraction < counter) return true; // added stopping mechanism
+  if (!(n0 = frontier.length) || cells.length*fillFraction < counter) return true; // added stopping mechanism
 
   context.fillStyle = d3.hsl(distance++ % 360, 1, .5) + "";
 
