@@ -84,10 +84,11 @@ d3.timer(function() {
 
     frontier = frontier1;
   }
-  context.fillRect(10,50,200,-50);
+  context.fillRect(10,20,200,80);
   context.fillStyle = "#000";
   context.font = "30px Arial";
   context.fillText('counter: '+counter, 10, 50);
+  context.fillText('cells: '+cells.length, 10, 80);
 });
 
 function fillCell(i) { // used to draw the maze
